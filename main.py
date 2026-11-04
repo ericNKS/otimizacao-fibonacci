@@ -26,3 +26,7 @@ tempoTotal = timeit.timeit(
 mediaTempoFib: float = (tempoTotal / qtdRepeticao)
 
 logging.info(f"Tempo médio não otimizado: {mediaTempoFib:.8f}s")
+
+
+
+print(fib(8))
