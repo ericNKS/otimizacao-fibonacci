@@ -152,6 +152,31 @@ Além da redução do tempo de execução, o projeto pretende demonstrar como a 
 
 Os resultados efetivos serão apresentados após a realização dos experimentos.
 
+### Comparação realizada
+
+O script `comparacao.py` compara as implementações recursiva e iterativa
+existentes para n = 5, 10, 15, 20, 25 e 30. Ele verifica se os resultados
+coincidem e mede cada algoritmo separadamente com `timeit`: a quantidade de
+execuções é calibrada automaticamente e o tempo apresentado é a mediana de
+cinco séries, dividido pelo número de chamadas de cada série.
+
+Para executar novamente com Python 3, sem dependências adicionais:
+
+```bash
+python comparacao.py
+```
+
+Os resultados são salvos na pasta `resultados/`:
+
+- `comparacao.csv`: valores calculados, tempos em segundos e aceleração.
+- `tempos.svg`: comparação dos tempos por chamada.
+- `aceleracao.svg`: razão entre o tempo recursivo e o iterativo.
+
+Os gráficos usam escala vertical logarítmica. Os tempos e a aceleração podem
+variar conforme o computador e a carga do sistema. A versão iterativa atual
+armazena todos os valores em uma lista, portanto usa espaço O(n); a versão
+com apenas dois valores descrita acima é uma alternativa ainda não implementada.
+
 ## 7. Etapas do projeto
 
 O projeto será organizado em duas entregas.

@@ -20,12 +20,8 @@ def fib(n):
     return nanterior[-1]
 
 # %%
-qtdRepeticao = 10000
-tempoTotal = timeit.timeit(
-    lambda: fib(20),
-    number=qtdRepeticao
-)
-
-mediaTempoFib: float = (tempoTotal / qtdRepeticao)
-
-logging.info(f"Tempo médio não otimizado: {mediaTempoFib:.8f}s")
+if __name__ == "__main__":
+    qtdRepeticao = 10000
+    tempoTotal = timeit.timeit(lambda: fib(20), number=qtdRepeticao)
+    mediaTempoFib = tempoTotal / qtdRepeticao
+    logging.info(f"Tempo médio otimizado: {mediaTempoFib:.8f}s")
